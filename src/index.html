@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+
+  <!-- Place this data between the <head> tags of your website -->
+    <title>Dawaey PWA</title>
+    <meta name="description" content="Dawaey: the #1 App for advanced drug search" />
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="Dawaey App">
+    <meta itemprop="description" content="Dawaey the #1 App for advanced drug search">
+    <meta itemprop="image" content="http://dawaey.com/img/logo.jpg">
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="@Microsmsm">
+    <meta name="twitter:title" content="Dawaey App">
+    <meta name="twitter:description" content="Dawaey the #1 App for advanced drug search">
+    <meta name="twitter:creator" content="@Microsmsm">
+    <meta name="twitter:image" content="http://dawaey.com/img/logo.jpg">
+    <meta name="twitter:data1" content="Android">
+    <meta name="twitter:label1" content="Download">
+    <meta name="twitter:data2" content="IOS">
+    <meta name="twitter:label2" content="Download">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Dawaey App" />
+    <meta property="og:type" content="product" />
+    <meta property="og:url" content="http://www.dawaey.com/" />
+    <meta property="og:image" content="http://dawaey.com/img/logo.jpg" />
+    <meta property="og:description" content="Dawaey the #1 App for advanced drug search" />
+    <meta property="og:site_name" content="Dawaey" />
+    <meta property="og:price:amount" content="Dwonload" />
+    <meta property="og:price:currency" content="Android" />
+  
+  <!-- cordova.js required for cordova apps 
+  <script src="cordova.js"></script>-->
+
+  <!-- un-comment this code to enable service worker-->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.log('Error', err));
+    }
+  </script>
+
+  <link href="build/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+
+</body>
+</html>

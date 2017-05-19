@@ -1,0 +1,58 @@
+<!--
+  Generated template for the DrugDetails page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="drug">
+      {{ drug.tradename }}
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+  <ion-card *ngIf="drug">
+
+    <ion-card-content>
+      <h3 color="primary">Tradename :</h3>
+      <h1>{{drug.tradename}}</h1>
+      <h3 color="primary">Active Ingredient(s) :</h3>
+      <h2>{{drug.activeingredient}}</h2>
+      <h3 color="primary">Contains :</h3>
+      {{drug.howmany}} {{drug.form}}
+      <h3 color="primary">Price :</h3>
+      <h2 class="price">{{drug.price}} EGP</h2>
+      <h3 color="primary">Main group: </h3>
+      {{drug.maingp}}
+      <h3 color="primary">Company :</h3>
+      {{drug.company}}
+    </ion-card-content>
+
+
+
+
+  </ion-card>
+
+  <ion-item-group *ngIf="drug">
+    <ion-item-divider color="light">More Information :</ion-item-divider>
+    <ion-card-content text-center>
+      <a ion-button href="https://www.google.com/search?q={{drug.tradename}} drug">Search HERE!</a>
+    </ion-card-content>
+  </ion-item-group>
+
+  <ion-item-group *ngIf="similars">
+    <ion-item-divider color="light">Similars :</ion-item-divider>
+    <ion-item *ngFor="let similar of similars" (click)="openDrug(similar.id)">
+      {{similar.tradename}} <span style="color:red;float:right;">{{similar.price}} EGP</span>
+    </ion-item>
+
+  </ion-item-group>
+
+
+</ion-content>

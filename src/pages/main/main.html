@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <!-- <ion-title>Search Drugs</ion-title> -->
+    <ion-searchbar (ionInput)="filterDrugs($event)"></ion-searchbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showRadio()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list [virtualScroll]="drugs" approxItemHeight="64px">
+
+    <ion-item *virtualItem="let drug" (click)="openDrug(drug.id)">
+      <ion-avatar item-left>
+        <img src="assets/img/icon.png">
+      </ion-avatar>
+      <h2>{{ drug.tradename  }}</h2>
+      <p>{{ drug.activeingredient  }}</p>
+      <ion-icon name="log-in" color="primary" item-right></ion-icon>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
